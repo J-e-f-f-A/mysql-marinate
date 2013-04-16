@@ -2,18 +2,36 @@ Homework for Chapter 2 of Learning MySQL (2006 edition), from p. 94:
 
 Exercises:
 1) What is command completion?
+    Pressing TAB while typing a commmand to complete the command based on your partial entry.  
+    IE: In the mysql-marinate directory, typing 'cd 01<tab>' will expand to "cd 01Intro/"
 
 2) What are the relative advantages of installing MySQL using the package,
  directory archive (tarball or "no-install", or compiled methods?
+    Tarball/RPM is easier to install
+    Compiled methods are slower to install, but are more flexible, and will often be a more recent code base.
 
 3) How do you verify the integrity of downloaded packages?
+    By comparing the MD5 sum of the file you downloaded with the vallue displayed on the download page.
+      * Note: The example on page 23 of the book doesn't match!  That's funny!
 
 4) How do you add the MySQL bin directory to the operating system path?
+    By adding the path to the MySQL bin directory to the PATH environmental
+    variable.  (In the ~/.bashrc file, or if another shell, their config file)
 
 Additional Exercises (not in the book): 
 1) Document how you installed MySQL and any issues you came across with installation. 
  (The goal is to be easy to install it again on a similar machine.)
+    I run Fedora Core, and have always just used the RPMs from their repositories, so I have just done:
+      yum install mysql mysql-devel
+    Most of my use of MySQL to date as been with my MythTV server, which provides scripts for DB creation
+     and population.  I have done many queries and updates 'manually' though.  I have recently started 
+     to create Databases from scratch and creating tables from scratch.  (I have done this on the Tandem
+     platform alot, just learning MySQL more now.)
 
 2) Document where important files should be.
+    This is where they 'live' on my Fedora system:
+      Executables: /usr/bin/
+      Databases:   /var/lib/mysql/
+      Config:      ~/.local/share/akonadi/mysql.conf
 
 Do not forget to do a pull request when your homework is complete.
